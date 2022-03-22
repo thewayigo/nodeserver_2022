@@ -11,5 +11,6 @@
 // console.log('Server is running at http://localhost:8000');
 
 const myServer = require('./myServer'); // myServer의 export 불러오기
+const myRouter = require('./myRouter');
 
-myServer.start(); // 함수 호출
+myServer.start(myRouter.route); // 함수 호출
