@@ -1,15 +1,16 @@
 function route(pathname, handle, res){
     console.log('Routing request for' + pathname);
-    if(typeof handle[pathname] === 'function'){  // handler가 제대로 들어갔다면 function 타입일것. 맞다면 그렇게 호출
+    if(typeof handle[pathname] === 'function'){  // hadle이 넘어왔을때 pathname을 넣어서 함수이면 핸들을 처리 = index.js의 handle 객체의 해당함수 호출
         handle[pathname](res);
     }
     else{
         console.log('404 Not Found');
+        let Body = '404 Not Found';
         res.writeHead(404,{'Content-Type': 'text/html'});
-        res.write(sBody);
+        res.write(Body);
         res.end();
 
     }
 }
 
-exports.route = route;
+exports.route = route;    //모듈.맴버 / 함수객체
