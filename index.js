@@ -12,5 +12,10 @@
 
 const myServer = require('./myServer'); // myServer의 export 불러오기
 const myRouter = require('./myRouter');
+const myHandler = require('./myHandler');
 
-myServer.start(myRouter.route); // 함수 호출
+let handle = {};
+handle['/'] = myHandler.start;
+handle['/hello'] = myHandler.hello;
+
+myServer.start(myRouter.route, handle); // 함수 호출
