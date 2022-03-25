@@ -20,6 +20,7 @@ handle['/hello'] = myHandler.hello;
 handle['/wait'] = myHandler.wait;
 handle['/randomWait'] = myHandler.randomWait;
 handle['/firstHtml'] = myHandler.firstHtml;
+handle['/serverInfo'] = myHandler.serverInfo;
 
 
 myServer.start(myRouter.route, handle); // 함수 호출 , 서버 스타트
