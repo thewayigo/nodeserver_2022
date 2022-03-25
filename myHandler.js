@@ -46,7 +46,7 @@ function randomWait(res){
 }
 
 function htmlFile(res,file){
-    body = fs.readFileSync(file,'utf-8');
+    Body = fs.readFileSync(file,'utf-8');
     res.writeHead(200,{'Content-Type': 'text/html'});
     res.write(Body);
     res.end(); 
@@ -54,7 +54,7 @@ function htmlFile(res,file){
 }
 
 function firstHtml(res){
-    htmlFile(res,'./firstHtml'.html);
+    htmlFile(res,'./firstHtml.html');
 }
 
 exports.start = start;  // 함수 객체 등록
@@ -62,3 +62,4 @@ exports.hello = hello;
 exports.wait = wait;
 exports.randomWait = randomWait;
 exports.firstHtml = firstHtml;
+exports.htmlFile = htmlFile;
