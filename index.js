@@ -18,6 +18,8 @@ let handle = {}; // handle을 객체로 생성하고
 handle['/'] = myHandler.start;  // 이런 방식으로 맴버를 추가한다
 handle['/hello'] = myHandler.hello;
 handle['/wait'] = myHandler.wait;
+handle['/randomWait'] = myHandler.randomWait;
+handle['/fisrtHtml'] = myHandler.fisrtHtml;
 
 
 myServer.start(myRouter.route, handle); // 함수 호출 , 서버 스타트
