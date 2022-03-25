@@ -22,6 +22,7 @@ handle['/randomWait'] = myHandler.randomWait;
 handle['/firstHtml'] = myHandler.firstHtml;
 handle['/serverInfo'] = myHandler.serverInfo;
 handle['/nickName'] = myHandler.nickName;
+handle['/people'] = myHandler.people;
 
 
 myServer.start(myRouter.route, handle); // 함수 호출 , 서버 스타트
