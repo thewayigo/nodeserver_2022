@@ -1,3 +1,3 @@
 git add --all
-git commit -m "add form input page"
+git commit -m "nickName page"
 git push -u origin master
